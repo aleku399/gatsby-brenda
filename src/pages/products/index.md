@@ -1,14 +1,11 @@
 ---
 templateKey: 'product-page'
 path: /products
-title: Our Coffee
+title: Our Story in Pictures
 image: /img/jumbotron.jpg
-heading: Great coffee with a conscience
+heading: Our story in pictures
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Lorem ipsum odor amet, consectetuer adipiscing elit. Ac purus in massa egestas mollis varius;dignissim elementum.
 intro:
   blurbs:
     - image: /img/coffee.png

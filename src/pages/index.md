@@ -1,21 +1,17 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+title: Helping teenagers
+image: /img/nab.jpeg
+heading: Children Foundation
+subheading: Support Young children
 mainpitch:
-  title: Why Kaldi
+  title: Nabalisa Foundation
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+   Lorem ipsum odor amet, consectetuer adipiscing elit. Ac purus in massa egestas mollis varius.
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Mollis tincidunt mattis hendrerit dolor eros enim, nisi ligula ornare.
+  Hendrerit parturient habitant pharetra rutrum gravida porttitor eros feugiat. Mollis elit
+  sodales taciti duis praesent id.
 intro:
   blurbs:
     - image: /img/coffee.png

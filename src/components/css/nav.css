@@ -1,0 +1,136 @@
+@media  screen and (min-width: 1000px) {
+  .Navbar {
+    background-color: #f3f3f3;
+  }
+}
+
+/* @media screen and (min-width: 1400px) {
+  .Navbar {
+    background-color: #f3f3f3;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .Navbar {
+    background-color: #f3f3f3;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .Navbar {
+    background-color: #f3f3f3;
+  }
+} */
+
+@media screen and (max-width: 1000px) {
+  .Navbar {
+    background-color: #e84439;
+  }
+}
+
+.Navbar {
+    position: relative;
+    z-index: 1;
+    /* display: block; */
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    padding: 16px;
+    font-family: sans-serif;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+  }
+
+  @media  screen and (min-width: 1000px) {
+    .Navbar::after {
+      width: 27%;
+      }
+  }
+
+  .Navbar::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    /* width: 75%; */
+    height: 100%;
+    background-color: #e84439;
+  }
+  
+  *, :after, :before {
+    box-sizing: border-box;
+  }
+
+  /* .Navbar {
+    display: flex;
+    padding: 16px;
+    font-family: sans-serif;
+  } */
+
+  .Navbar__Link {
+    padding-right: 31px;
+  }
+  .Navbar__Items {
+    display: flex;
+  }
+  .Navbar__Items--right {
+     margin-left:auto; 
+  }
+  .Navbar__Link-toggle {
+    display: none;
+  }
+  @media only screen and (max-width: 768px) {
+    .Navbar__Items,
+    .Navbar {
+      flex-direction: column;
+      background-color: #e84439;
+    }
+  .Navbar__Items {
+      display:none;
+    }
+  .Navbar__Items--right {
+      margin-left:0;
+    }
+  .Navbar__ToggleShow {
+      display: flex;
+    }
+  .Navbar__Link-toggle {
+      align-self: flex-end;
+      display: initial;
+      position: absolute;
+      cursor: pointer;
+     } 
+  }
+
+  .Navbar__Link a {
+    color: #999;  
+    text-transform: uppercase;
+    /* font-size: 11px; */
+    font-size: 0.9rem;
+    font-weight: 500;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .Navbar__Link a:hover {
+    color: black;   
+  }
+
+.Navbar__Link-brand a {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 400;
+    /* line-height: 64px; */
+    color: #f3f3f3;
+    text-decoration: none;
+    letter-spacing: 6px;
+}
+.navbar-brand  {
+    color:  #333;
+}
+

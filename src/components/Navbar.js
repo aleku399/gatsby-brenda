@@ -1,98 +1,65 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React from "react";
+import Link from "gatsby-link";
+import {FaAlignJustify} from 'react-icons/fa'
 
 const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
+
+  componentDidMount(){
+    function classToggle() {
+      const navs = document.querySelectorAll('.Navbar__Items')
+      
+      navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
     }
+    document.querySelector('.Navbar__Link-toggle')
+    .addEventListener('click', classToggle);
   }
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
-  }
-
-  render() {
-    return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    )
-  }
+ render() {
+   return (
+  <div className="Navbar fixed-top">
+    <div className="Navbar__Link Navbar__Link-brand">
+      <Link className="navbar-brand" to="/"  activeStyle={{ color: "black" }} title="nabalisa">
+          Nabalisa Foundation
+      </Link>
+    </div>
+    <div
+      className={`Navbar__Link Navbar__Link-toggle`} 
+    >
+      <FaAlignJustify  />
+    </div>
+    <nav
+      role="navigation"
+      id="navigation-primary"
+      className={`navigatio-primary Navbar__Items Navbar__Items--right `}
+    >
+      <div className="Navbar__Link">
+        <Link className="nav-link navigation__navlinks"  onClick={this.closeNavbar}  activeStyle={{ color: "black" }}  to="/about">
+          ABOUT US
+        </Link>
+      </div>
+      <div className="Navbar__Link">
+        <Link className="nav-link navigation__navlinks"  onClick={this.closeNavbar}  activeStyle={{ color: "black" }} to="/contact">
+          CONTACT
+        </Link>
+      </div>
+      <div className="Navbar__Link">
+        <Link className="nav-link navigation__navlinks"  onClick={this.closeNavbar} activeStyle={{ color: "black" }} to="/products">
+          PORTFOLIO
+        </Link>
+      </div>
+      <div className="Navbar__Link">
+        <Link className="nav-link navigation__navlinks"  onClick={this.closeNavbar} activeStyle={{ color: "black" }} to="/blog">
+          BLOGS
+        </Link>
+      </div>
+      {/* <div className="Navbar__Link">
+        <Link className="nav-link navigation__navlinks"  onClick={this.closeNavbar}  activeStyle={{ color: "black" }}  to="/contact/examples">
+          Form Examples
+        </Link>
+      </div> */}
+    </nav>
+  </div>
+  )}
 }
 
 export default Navbar

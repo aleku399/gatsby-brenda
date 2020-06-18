@@ -5,6 +5,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import image from "../img/nab.jpeg";
 
 export const IndexPageTemplate = ({
   image,
@@ -16,87 +17,79 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
+    <section className="hero hero--image">
       <div
+        className="hero__image"
+        id="rid"
         style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
+          backgroundImage: `url(${
+            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
         }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
+      > 
+          <div className="row row--narrow">
+            <div className="hero__content">
+              <ul className="hero__meta">
+                <li className="hero__meta-item  hero__meta-item--block">Briefing</li>
+              </ul>
+              <h1
+                className="hero__title">
+                {title}
+              </h1>
+              {/* <h3 className="hero_title">
+                {subheading}
+              </h3> */}
+              <div className="hero__excerpt">
+                <span>
+                  <p>{mainpitch.description}</p>
+                </span>
+              </div>
+              <div>
+                <Link className="btn" to="/blog/2017-01-04-a-beginners-guide-to-brewing-with-chemex/">
+                  Read more
+                </Link>
+              </div>
+            </div>
+          </div>
       </div>
-    </div>
+    </section>
+    <section className="section">
+      <div className="row row--narrow">
+        <div className="columns">
+          <div className="column">
+            <h2 className="section__heading">{mainpitch.title}</h2>
+            <div className="is-typeset max-meter">
+              <p>
+              {mainpitch.description}
+              </p>
+            </div>
+            <Link className="btn" to="/blog">
+              Find out more who we are
+            </Link>
+          </div>
+          <div className="column">
+            <h2 className="section__heading">{subheading}</h2>
+            <div className="is-typeset max-meter">
+              <p>
+              {description}
+              </p>
+            </div>
+            <Link className="btn" to="/blog">
+              Find out more about what we do
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
                 <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
+                  <h3 className="feature__heading has-text-weight-semibold is-size-2">
+                    Featured Work
                   </h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
@@ -128,7 +121,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
+  console.log("frontmatter", frontmatter)
   return (
     <Layout>
       <IndexPageTemplate

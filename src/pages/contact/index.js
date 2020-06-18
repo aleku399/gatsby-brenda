@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
+import image from '../../img/nab.jpeg'
 
 function encode(data) {
   return Object.keys(data)
@@ -36,6 +37,25 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <section className="hero hero--image"   id="rie">
+          <div
+            className="hero__image"
+            style={{
+              backgroundImage: `url(${
+                image
+              })`,
+            }}
+          > 
+              <div className="row row--narrow">
+                <div className="hero__content">
+                  <h1
+                    className="hero__title">
+                    Contact Us
+                  </h1>
+                </div>
+              </div>
+          </div>
+        </section>
         <section className="section">
           <div className="container">
             <div className="content">

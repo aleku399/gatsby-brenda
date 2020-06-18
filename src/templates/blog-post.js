@@ -13,10 +13,31 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  image
 }) => {
   const PostContent = contentComponent || Content
 
   return (
+    <>
+    <section className="hero hero--image"   id="rie">
+      <div
+        className="hero__image"
+        style={{
+          backgroundImage: `url(${
+            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
+        }}
+      > 
+          <div className="row row--narrow">
+            <div className="hero__content">
+              <h1
+                className="hero__title">
+                  {title}
+              </h1>
+            </div>
+          </div>
+      </div>
+    </section>
     <section className="section">
       {helmet || ''}
       <div className="container content">
@@ -43,6 +64,7 @@ export const BlogPostTemplate = ({
         </div>
       </div>
     </section>
+    </>
   )
 }
 
@@ -52,6 +74,7 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 
 const BlogPost = ({ data }) => {
@@ -63,6 +86,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        image={post.frontmatter.image}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -96,6 +120,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         tags
       }
     }

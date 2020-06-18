@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import SimpleReactLightbox from "simple-react-lightbox";
+import { SRLWrapper } from 'simple-react-lightbox'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
@@ -19,27 +21,26 @@ export const ProductPageTemplate = ({
   pricing,
 }) => (
   <div className="content">
-    <div
-      className="full-width-image-container margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-      }}
-    >
-      <h2
-        className="has-text-weight-bold is-size-1"
-        style={{
-          boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-          backgroundColor: '#f40',
-          color: 'white',
-          padding: '1rem',
-        }}
-      >
-        {title}
-      </h2>
-    </div>
-    <section className="section section--gradient">
+    <section className="hero hero--image"   id="rie">
+         <div
+            className="hero__image"
+            style={{
+              backgroundImage: `url(${
+                !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+              })`,
+            }}
+          > 
+              <div className="row row--narrow">
+                <div className="hero__content">
+                  <h1
+                    className="hero__title">
+                     {title}
+                  </h1>
+                </div>
+              </div>
+          </div>
+         </section>
+    <section className="section section--gradient up">
       <div className="container">
         <div className="section">
           <div className="columns">
@@ -48,56 +49,30 @@ export const ProductPageTemplate = ({
               <p>{description}</p>
             </div>
           </div>
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <Features gridItems={intro.blurbs} />
-              <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
-                    {main.heading}
-                  </h3>
-                  <p>{main.description}</p>
-                </div>
-              </div>
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image1} />
-                      </article>
-                    </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image2} />
-                      </article>
-                    </div>
-                  </div>
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image3} />
-                    </article>
-                  </div>
-                </div>
-              </div>
-              <Testimonials testimonials={testimonials} />
-              <div
-                className="full-width-image-container"
-                style={{
-                  backgroundImage: `url(${
-                    fullImage.childImageSharp
-                      ? fullImage.childImageSharp.fluid.src
-                      : fullImage
-                  })`,
-                }}
-              />
-              <h2 className="has-text-weight-semibold is-size-2">
-                {pricing.heading}
-              </h2>
-              <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
-            </div>
+        <SRLWrapper>
+        <div className="columns">
+          <div className="column">
+            <PreviewCompatibleImage imageInfo={main.image1} />
           </div>
+          <div className="column">
+            <PreviewCompatibleImage imageInfo={main.image2} />
+          </div>
+          <div className="column">
+            <PreviewCompatibleImage imageInfo={main.image1} />
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column">
+            <PreviewCompatibleImage imageInfo={main.image2} />
+          </div>
+          <div className="column">
+            <PreviewCompatibleImage imageInfo={main.image1} />
+          </div>
+          <div className="column">
+            <PreviewCompatibleImage imageInfo={main.image2} />
+          </div>
+        </div>
+        </SRLWrapper>
         </div>
       </div>
     </section>
@@ -132,19 +107,21 @@ const ProductPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <Layout>
-      <ProductPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-        main={frontmatter.main}
-        testimonials={frontmatter.testimonials}
-        fullImage={frontmatter.full_image}
-        pricing={frontmatter.pricing}
-      />
-    </Layout>
+    <SimpleReactLightbox>
+      <Layout>
+        <ProductPageTemplate
+          image={frontmatter.image}
+          title={frontmatter.title}
+          heading={frontmatter.heading}
+          description={frontmatter.description}
+          intro={frontmatter.intro}
+          main={frontmatter.main}
+          testimonials={frontmatter.testimonials}
+          fullImage={frontmatter.full_image}
+          pricing={frontmatter.pricing}
+        />
+      </Layout>
+    </SimpleReactLightbox>
   )
 }
 

@@ -1,33 +1,40 @@
 ---
 templateKey: blog-post
-title: Making sense of the SCAA’s new Flavor Wheel
-date: 2016-12-17T15:04:10.000Z
-featuredpost: false
+title: Non etiam tempor id arcu magna 
+path: /blog/meet-and-greet-for-a-good-cause
+description: Lorem ipsum odor amet
+date: 2018-11-9T20:15:10.000Z
+image: /img/nab.jpeg
 featuredimage: /img/flavor_wheel.jpg
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+featuredpost: false
 tags:
-  - flavor
-  - tasting
+  - UNCATEGORIZED
+  - POST
 ---
 ![flavor wheel](/img/flavor_wheel.jpg)
 
-The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
+Non etiam tempor id arcu magna ante eget. Nec per posuere cubilia cras porttitor condimentum
+orci suscipit. Leo maecenas in tristique, himenaeos elementum placerat. Taciti rutrum nostra,
+eget cursus velit ultricies.
 
-While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
+Lorem ipsum odor amet, consectetuer adipiscing elit. Ac purus in massa egestas mollis varius;dignissim elementum. Mollis tincidunt mattis hendrerit dolor eros enim, nisi ligula ornare.
+Hendrerit parturient
 
-## What the updates mean to you
+## Lorem ipsum odor amet, consectetuer adipiscing elit
 
-The Specialty Coffee Association of America (SCAA), founded in 1982, is a non-profit trade organization for the specialty coffee industry. With members located in more than 40 countries, SCAA represents every segment of the specialty coffee industry, including:
+Lorem ipsum odor amet, consectetuer adipiscing elit. Imperdiet erat nullam tortor quis elit lacus blandit vitae. Nostra dapibus bibendum; curae magnis commodo metus vestibulum tristique. Tristique volutpat consectetur congue lorem pharetra habitant.
 
-* producers
-* roasters
-* importers/exporters
-* retailers
-* manufacturers
-* baristas
+* ipsum odor
+* ipsum odor
+* Nostra/Tristique
+* volutpat
+* congue
+* lorem
 
-For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffee community by recognizing, developing and promoting specialty coffee. SCAA sets and maintains quality standards for the industry, conducts market research, and provides education, training, resources, and business services for its members.
+Ridiculus proin etiam justo vivamus dignissim suscipit maecenas. Gravida ornare interdum ex dui eu faucibus dictum dis blandit. Rhoncus habitasse suscipit felis massa, ultrices auctor. Laoreet magnis justo velit vulputate iaculis at pulvinar augue
 
-Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
+Augue malesuada massa torquent diam tortor; porttitor dis massa. Habitasse nunc ad placerat;
+ante netus gravida a porttitor. Vel aliquet hendrerit efficitur facilisis fames lacinia portaper. Integer euismod aenean mi hendrerit in volutpat consequat tempus turpis. Bibendum massa adtincidunt, platea montes ac arcu.
 
-The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.
+Augue malesuada massa torquent diam tortor; porttitor dis massa. Habitasse nunc ad placerat;
+ante netus gravida a porttitor. Vel aliquet hendrerit efficitur facilisis fames lacinia portaper. Integer euismod aenean mi hendrerit in volutpat consequat tempus turpis. Bibendum massa adtincidunt, platea montes ac arcu.
