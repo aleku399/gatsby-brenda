@@ -7,9 +7,9 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import CompatibleImage from '../components/CompatibleImage'
 
-export const ProductPageTemplate = ({
+export const GalleryPageTemplate = ({
   image,
   title,
   heading,
@@ -52,25 +52,36 @@ export const ProductPageTemplate = ({
         <SRLWrapper>
         <div className="columns">
           <div className="column">
-            <PreviewCompatibleImage imageInfo={main.image1} />
+            <CompatibleImage imageInfo={main.image1} />
           </div>
           <div className="column">
-            <PreviewCompatibleImage imageInfo={main.image2} />
+            <CompatibleImage imageInfo={main.image2} />
           </div>
           <div className="column">
-            <PreviewCompatibleImage imageInfo={main.image1} />
+            <CompatibleImage imageInfo={main.image3} />
           </div>
         </div>
         <div className="columns">
           <div className="column">
-            <PreviewCompatibleImage imageInfo={main.image2} />
+            <CompatibleImage imageInfo={main.image4} />
           </div>
           <div className="column">
-            <PreviewCompatibleImage imageInfo={main.image1} />
+            <CompatibleImage imageInfo={main.image5} />
           </div>
           <div className="column">
-            <PreviewCompatibleImage imageInfo={main.image2} />
+            <CompatibleImage imageInfo={main.image6} />
           </div>
+        </div>
+        <div className="columns">
+          <div className="column">
+            <CompatibleImage imageInfo={main.image7} />
+          </div>
+          <div className="column">
+            <CompatibleImage imageInfo={main.image8} />
+          </div>
+          {/* <div className="column">
+            <PreviewCompatibleImage imageInfo={main.image2} />
+          </div> */}
         </div>
         </SRLWrapper>
         </div>
@@ -79,7 +90,7 @@ export const ProductPageTemplate = ({
   </div>
 )
 
-ProductPageTemplate.propTypes = {
+GalleryPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -103,13 +114,13 @@ ProductPageTemplate.propTypes = {
   }),
 }
 
-const ProductPage = ({ data }) => {
+const GalleryPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <SimpleReactLightbox>
       <Layout>
-        <ProductPageTemplate
+        <GalleryPageTemplate
           image={frontmatter.image}
           title={frontmatter.title}
           heading={frontmatter.heading}
@@ -117,7 +128,7 @@ const ProductPage = ({ data }) => {
           intro={frontmatter.intro}
           main={frontmatter.main}
           testimonials={frontmatter.testimonials}
-          fullImage={frontmatter.full_image}
+          // fullImage={frontmatter.full_image}
           pricing={frontmatter.pricing}
         />
       </Layout>
@@ -125,7 +136,7 @@ const ProductPage = ({ data }) => {
   )
 }
 
-ProductPage.propTypes = {
+GalleryPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -133,10 +144,10 @@ ProductPage.propTypes = {
   }),
 }
 
-export default ProductPage
+export default GalleryPage
 
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
+export const GalleryPageQuery = graphql`
+  query GalleryPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
@@ -170,7 +181,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
+                fluid(maxWidth: 1075, quality: 92) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -180,7 +191,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
+                fluid(maxWidth: 1075, quality: 92) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -196,18 +207,68 @@ export const productPageQuery = graphql`
               }
             }
           }
+          image4 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1075, quality: 72) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image5 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1075, quality: 72) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image6 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1075, quality: 72) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image7 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1075, quality: 72) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image8 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1075, quality: 72) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
         testimonials {
           author
           quote
         }
-        full_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        # full_image {
+        #   childImageSharp {
+        #     fluid(maxWidth: 2048, quality: 100) {
+        #       ...GatsbyImageSharpFluid
+        #     }
+        #   }
+        # }
         pricing {
           heading
           description

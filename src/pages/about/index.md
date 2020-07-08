@@ -2,7 +2,7 @@
 templateKey: 'about-page'
 path: /about
 title: About our values
-image: /img/flavor_wheel.jpg
+image: /img/g6.jpeg
 description: >-
   Lorem ipsum odor amet, consectetuer adipiscing elit. Primis eros nunc fringilla id rutrum nibh.Orci convallis pulvinar urna fusce
 ---

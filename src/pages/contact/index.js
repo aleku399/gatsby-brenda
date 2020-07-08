@@ -1,7 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
-import image from '../../img/nab.jpeg'
+import image from '../../img/g4.jpeg'
 
 function encode(data) {
   return Object.keys(data)

@@ -3,14 +3,14 @@ templateKey: blog-post
 title: Lorem ipsum odor amet
 date: 2017-01-04T15:04:10.000Z
 featuredpost: true
-featuredimage: /img/flavor_wheel.jpg
-image: /img/flavor_wheel.jpg
+featuredimage: /img/g2.jpeg
+image: /img/g2.jpeg
 description: Lorem ipsum odor amet, consectetuer adipiscing elit. Primis eros nunc fringilla id rutrum nibh.Orci convallis pulvinar urna fusce
 tags:
   - brewing
   - chemex
 ---
-![chemex](/img/chemex.jpg)
+![chemex](/img/g2.jpeg)
 
 Non etiam tempor id arcu ***magna*** ante eget. Nec per posuere cubilia cras porttitor condimentum orci suscipit. Leo maecenas in tristique, himenaeos elementum placerat. Taciti rutrum nostra,
 eget cursus velit ultrici

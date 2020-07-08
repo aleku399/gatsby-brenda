@@ -43,8 +43,8 @@ const Navbar = class extends React.Component {
         </Link>
       </div>
       <div className="Navbar__Link">
-        <Link className="nav-link navigation__navlinks"  onClick={this.closeNavbar} activeStyle={{ color: "black" }} to="/products">
-          PORTFOLIO
+        <Link className="nav-link navigation__navlinks"  onClick={this.closeNavbar} activeStyle={{ color: "black" }} to="/gallery">
+          GALLERY
         </Link>
       </div>
       <div className="Navbar__Link">

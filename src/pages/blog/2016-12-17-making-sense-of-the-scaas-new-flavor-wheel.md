@@ -5,13 +5,13 @@ path: /blog/meet-and-greet-for-a-good-cause
 description: Lorem ipsum odor amet
 date: 2018-11-9T20:15:10.000Z
 image: /img/nab.jpeg
-featuredimage: /img/flavor_wheel.jpg
+featuredimage: /img/g2.jpeg
 featuredpost: false
 tags:
   - UNCATEGORIZED
   - POST
 ---
-![flavor wheel](/img/flavor_wheel.jpg)
+![flavor wheel](/img/g1.jpeg)
 
 Non etiam tempor id arcu magna ante eget. Nec per posuere cubilia cras porttitor condimentum
 orci suscipit. Leo maecenas in tristique, himenaeos elementum placerat. Taciti rutrum nostra,

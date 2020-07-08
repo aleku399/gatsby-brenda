@@ -1,8 +1,8 @@
 ---
-templateKey: 'product-page'
-path: /products
+templateKey: 'gallery-page'
+path: /gallery
 title: Our Story in Pictures
-image: /img/jumbotron.jpg
+image: /img/g8.jpeg
 heading: Our story in pictures
 description: >-
   Lorem ipsum odor amet, consectetuer adipiscing elit. Ac purus in massa egestas mollis varius;dignissim elementum.
@@ -49,14 +49,29 @@ main:
     journey. We personally visit each farm to make sure the conditions are
     optimal for the plants, farmers and the local environment.
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
+    alt: Image for gallery
+    image: /img/g1.jpeg
   image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
+    alt: Image for gallery
+    image: /img/g2.jpeg
   image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
+    alt: Image for gallery
+    image: /img/g3.jpeg
+  image4:
+    alt: Image for gallery
+    image: /img/g4.jpeg
+  image5:
+    alt: Image for gallery
+    image: /img/g5.jpeg
+  image6:
+    alt: Image for gallery
+    image: /img/g6.jpeg
+  image7:
+    alt: Image for gallery
+    image: /img/g8.jpeg
+  image8:
+    alt: Image for gallery
+    image: /img/g9.jpeg
 testimonials:
   - author: Elisabeth Kaurismäki
     quote: >-

@@ -3,8 +3,8 @@ templateKey: 'blog-post'
 title: 'Primis eros nunc fringilla id'
 date: 2017-01-04T15:04:10.000Z
 featuredpost: false
-featuredimage: /img/flavor_wheel.jpg
-image: /img/flavor_wheel.jpg
+featuredimage: /img/g3.jpeg
+image: /img/g3.jpeg
 description: >-
   Lorem ipsum odor amet, consectetuer adipiscing elit. Primis eros nunc fringilla id rutrum nibh.Orci convallis pulvinar urna fusce
   consectetuer adipiscing elit. Primis eros nunc fringilla id rutrum nibh.Orci convallis pulvinar urna fusce
